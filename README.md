@@ -67,11 +67,11 @@ Pada setiap file atau directory di Linux memiliki permisi yang terdiri dari tiga
 Permision rwx adalah direpresentasikan dalam bilangan numerik, misalkan untuk kemampuan baca dan tulis tetapi tidak bisa eksekusi adalah 6 (atau 110 secara biner)
 # Pipeline dan Redirection
 Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2) yang memungkinkan redirection output suatu command menjadi input ke command lain. Beberapa simbol yang dapat digunakan adalah:
-1. > menyimpan output ke file, contoh ls > myoutput.txt, akan menyimpan hasil ls ke file myoutput.txt
-2. >> menambah output ke file, ls >> myoutput.txt, akan menambah hasil ls ke file myoutput.txt
+1. \> menyimpan output ke file, contoh ls > myoutput.txt, akan menyimpan hasil ls ke file myoutput.txt
+2. \>\> menambah output ke file, ls >> myoutput.txt, akan menambah hasil ls ke file myoutput.txt
 3. < membaca file sebagai input, wc -l < myinput.txt, akan membaca file myinput sebagai input ke perintah wc -l
-4. 2> redirect pesan error, misalkan tidak ada file myinput.txt, dan perintah ls myinput.txt 2>error.txt akan menyimpan 'no such file or directory' ke file error.txt
-5. | mengirim output suatu command sebagai input bagi command lain, ls | grep '^......rw', akan menampilkan baris file hasil ls yang memiliki hak rw pada user others.
+4. 2\> redirect pesan error, misalkan tidak ada file myinput.txt, dan perintah ls myinput.txt 2>error.txt akan menyimpan 'no such file or directory' ke file error.txt
+5. \| mengirim output suatu command sebagai input bagi command lain, ls | grep '^......rw', akan menampilkan baris file hasil ls yang memiliki hak rw pada user others.
 # Process Management
 Process management digunakan untuk menampilkan process yang aktif pada Linux.
 1. top, menampilkan ringkasa kejadian pada system seperti task aktif, yang running dan sleeping, pemakaian memory dan swap serta daftar process yang berjalan
