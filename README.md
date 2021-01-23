@@ -147,3 +147,60 @@ read -p "Isikan angka kedua: " int2
 tambah $int1 $int2
 echo "Hasil tambah kedua angka : " $?
 ```
+Pemakaian while do ... done
+```
+#!/bin/bash
+isvalid=true
+count=1
+while [ $isvalid ]
+do
+   echo $count
+   if [ $count -eq 5 ];
+   then
+      break
+   fi
+   ((count++))
+done  
+```
+Pemakaian for do ... done
+```
+#!/bin/bash
+for (( count=10; count>0; count-- ))
+do
+   echo -n "$count "
+done  
+```
+Pemakaian if ... elif ... el ... fi
+```
+#!/bin/bash
+echo "Enter a valid number"
+read n
+if [ $n -eq 101 ];
+then
+   echo "This is first number"
+elif [ $n -eq 510 ];
+then
+   echo " This is second number "
+elif [ $n -eq 999 ];
+then
+   echo " This is third number "
+else
+   echo "No numbers over here"
+fi  
+```
+Pemakaian case esac
+```
+#!/bin/bash
+echo " Enter a valid number"
+read n
+case $n in
+101)
+   echo " This is the first number " ;;
+510)
+   echo " This is the second number " ;;
+999)
+   echo " This is the third number " ;;
+*)
+   echo " No numbers over here " ;;
+esac  
+```
