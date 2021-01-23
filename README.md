@@ -112,3 +112,38 @@ rotate = `date +%F --date='-30days'`
 rm ~/backups/$rotate.tar.gz
 echo Backup of $1 completed
 ```
+### Pembuatan Function
+Pada bash script juga tersedia pembuatan sub untuk memungkinkan pemanggilan berulang terhadap suatu sub-rutin tertentu
+```
+#!/bin/bash
+myfunction(){
+   echo "Hello"
+   echo "Hendra"
+}
+#panggil myfunction
+myfunction
+```
+Pada bash script juga dimungkinkan untuk penambahan parameter sebagai input ke sub-rutin
+```
+#!/bin/bash
+myfunction(){
+   #tampilkan parameter 1
+   echo $1
+   #tampilkan parameter 2
+   echo $2
+}
+#panggil myfunction
+myfunction "Hello" "Hendra"
+```
+Pada bash script juga dimungkinkan untuk pengembalian nilai dari sub-rutin
+```
+#!/bin/bash
+tambah(){
+   sum=$(($1+$2))
+   return $sum
+}
+read -p "Isikan angka pertama: " int1
+read -p "Isikan angka kedua: " int2
+tambah $int1 $int2
+echo "Hasil tambah kedua angka : " $?
+```
