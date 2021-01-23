@@ -10,6 +10,9 @@ Berikut ini adalah beberapa perintah Linux yang perlu dikuasai oleh Network Admi
 8. rm [options] <target>, singkatan dari remove, yaitu untuk menghapus file atau directory.
 9. cat <file>, singkatan dari concatenate, yang dapat digunakan untuk mengabungkan file, tetapi biasanya digunakan untuk menampilkan isi file berukuran kecil.
 10. less <file>, untuk menampilkan isi file berukuran besar yang disertai dengan kemampuan nagivasi, tekan q untuk mengakhiri
+11. head [-number of lines] <file>, menampilkan n jumlah baris pertama dari suatu file
+12. tail [-number of lines] <file>, menampilkan n jumlah baris terakhir dari suatu file
+13. sed <expression> <file>, melakukan operasi search and replace pada file. contoh sed 's/banana/orange/g' fruit adalah operasi menganti seluruh kata banana menjadi orange dalam file fruit.
 
 ## vi <file>
 Perintah vi adalah command line editor yang digunakan untuk menampilkan file yang disertai dengan kemampuan search, dan edit. Untuk mengaktifkan modus command pada vi adalah menggunakan tombol ESC dan disertai dengan perintah:
