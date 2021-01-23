@@ -54,7 +54,7 @@ Selain tombol panah, anda dapat menekan ESC disertai dengan kombinasi key beriku
 8. b untuk mengerakan kursor ke awal kata sebelumnya
 9. { bergerak satu paragraf sebelumnya
 10. } bergerak satu paragraf berikutnya
-# wildcard ?, *, []
+## wildcard ?, *, []
 Karakter wildcard adalah sering digunakan untuk operasi terkait dengan file, seperti ls, cp, mv, rm, adapun aturan terkait dengan wildcard adalah:
 1. ? mewakili 0 atau 1 karakter
 2. \* mewakili 0 atau beberapa karakter
