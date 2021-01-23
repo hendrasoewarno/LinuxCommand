@@ -77,4 +77,5 @@ Process management digunakan untuk menampilkan process yang aktif pada Linux.
 1. top, menampilkan ringkasa kejadian pada system seperti task aktif, yang running dan sleeping, pemakaian memory dan swap serta daftar process yang berjalan
 2. ps [aux], adalah singkatan dari process, misalkan perintah ps aux | grep 'firefox' akan menampilkan baris process terkait dengan aplikasi 'firefox'
 3. kill <psid>, menghentikan process id tertentu
-  
+## Script
+Pembuatan script akan sangat membantu dalam banyak hal, yaitu mengotomatisasi rangkaian perintah yang perlu dilakukan secara berurutan.
