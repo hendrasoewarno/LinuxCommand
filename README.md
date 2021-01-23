@@ -29,7 +29,12 @@ Pengetahuan terkait dengan ekspresi regular dapat membantu pada perintah yang me
 12. () mengelompokan sejumlah karakter dalam kurung sebagai satu kesatuan
 13. | mewakili pernyataan atau
 14. ^ pencocokan dari awal baris
-15. $ pencocokan dari akhir bari
+15. $ pencocokan dari akhir baris
+### Contoh
+1. egrep '[aeiou]{2,}' fruit, akan menampilkan baris memiliki nama buah yang memiliki 2 atau lebih huruf hidup
+2. egrep '^a' fruit, menampilkan baris yang diawali dengan huruf a
+3. egrep 'a$' fruit, menampilkan baris yang diakhiri dengan huruf a
+
 
 ## vi <file>
 Perintah vi adalah command line editor yang digunakan untuk menampilkan file yang disertai dengan kemampuan search, dan edit. Untuk mengaktifkan modus command pada vi adalah menggunakan tombol ESC dan disertai dengan perintah:
