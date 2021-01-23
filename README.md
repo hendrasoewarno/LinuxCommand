@@ -19,8 +19,8 @@ Berikut ini adalah beberapa perintah Linux yang perlu dikuasai oleh Network Admi
 Pengetahuan terkait dengan ekspresi regular dapat membantu pada perintah yang mendukung pencocokan pattern seperti egrep. Adapun aturan pada suatu ekspresi regular adalah:
 1. . (titik) mewakili suatu karakter tunggal
 2. ? (tanda tanya) mewakili 0 atau 1 karakter didepannya
-3. * (asterik) mewakili 0 atau sejumlah karakter didepannya
-4. + (plus) mewakili minimal 1 atau sejumlah karakter didepannya
+3. \* (asterik) mewakili 0 atau sejumlah karakter didepannya
+4. \+ (plus) mewakili minimal 1 atau sejumlah karakter didepannya
 5. {n} mewakili persis n jumlah karakter didepannya
 6. {n,m} mewakili n sampai m jumlah karakter didepannya
 9. [agd] mewakili salah satu karakter didalam kurung
