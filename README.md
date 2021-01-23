@@ -91,5 +91,7 @@ Contoh:
 date=`date +%F`
 mkdir ~/backups/$date
 mysqldump --databases $* > ~/backups/$date/my_databases.sql
+tar -czvf ~/backups/$date/my_databases.sql ~/backups/$date
+rm -rf ~/backups/$date
 echo Backup of $1 completed
 ```
