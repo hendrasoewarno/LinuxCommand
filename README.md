@@ -13,7 +13,7 @@ Berikut ini adalah beberapa perintah Linux yang perlu dikuasai oleh Network Admi
 11. head [-number of lines] <file>, menampilkan n jumlah baris pertama dari suatu file
 12. tail [-number of lines] <file>, menampilkan n jumlah baris terakhir dari suatu file
 13. sed <expression> <file>, melakukan operasi search and replace pada file. contoh sed 's/banana/orange/g' fruit adalah operasi menganti seluruh kata banana menjadi orange dalam file fruit.
-14. egrep [-options] <pattern> <file>, menampilkan baris yang memenuhi pola pencarian berdasarkan ekspresi regressi.
+14. egrep [-options] <pattern> <file>, menampilkan baris yang memenuhi pola pencarian berdasarkan ekspresi regressi, contoh egrep 'mellon' fruit akan menampilkan baris yang memiliki kata mellon, seperti mellon, water mellon dan winter mellon. contoh egrep -n 'mellon' fruit akan menambilkan nomor baris dan baris yang memiliki kata mellon.
 
 ## vi <file>
 Perintah vi adalah command line editor yang digunakan untuk menampilkan file yang disertai dengan kemampuan search, dan edit. Untuk mengaktifkan modus command pada vi adalah menggunakan tombol ESC dan disertai dengan perintah:
