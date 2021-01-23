@@ -107,5 +107,8 @@ mkdir ~/backups/$date
 mysqldump --databases $* > ~/backups/$date/my_databases.sql
 tar -czvf ~/backups/$date/my_databases.sql ~/backups/$date
 rm -rf ~/backups/$date
+rotate = `date +%F --date='-30days'`
+#delete 30 days ago backup file
+rm ~/backups/$rotate.tar.gz
 echo Backup of $1 completed
 ```
