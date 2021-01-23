@@ -14,6 +14,7 @@ Berikut ini adalah beberapa perintah Linux yang perlu dikuasai oleh Network Admi
 12. tail [-number of lines] <file>, menampilkan n jumlah baris terakhir dari suatu file
 13. sed <expression> <file>, melakukan operasi search and replace pada file. contoh sed 's/banana/orange/g' fruit adalah operasi menganti seluruh kata banana menjadi orange dalam file fruit.
 14. egrep [-options] <pattern> <file>, menampilkan baris yang memenuhi pola pencarian berdasarkan ekspresi reqular, contoh egrep 'mellon' fruit akan menampilkan baris yang memiliki kata mellon, seperti mellon, water mellon dan winter mellon. contoh egrep -n 'mellon' fruit akan menambilkan nomor baris dan baris yang memiliki kata mellon. contoh egrep -c 'mellon' fruit akan menampilkan jumlah baris yang mengandung kata mellon.
+15. which <command>, menampilkan lokasi binary dari suatu command, misalkan which ls akan menampilkan /bin/ls
   
 ## Regular Expression
 Pengetahuan terkait dengan ekspresi regular dapat membantu pada perintah yang mendukung pencocokan pattern seperti egrep. Adapun aturan pada suatu ekspresi regular adalah:
@@ -64,3 +65,16 @@ Pada setiap file atau directory di Linux memiliki permisi yang terdiri dari tiga
 2. w adalah kemampuan menulis (angka 1 pada bit kedua)
 3. x adalah kemampuan eksekusi untuk file, atau kemampuan masuk ke direktori (angka 1 pada bit pertama)
 Permision rwx adalah direpresentasikan dalam bilangan numerik, misalkan untuk kemampuan baca dan tulis tetapi tidak bisa eksekusi adalah 6 (atau 110 secara biner)
+# Pipeline dan Redirection
+Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2) yang memungkinkan redirection output suatu command menjadi input ke command lain. Beberapa simbol yang dapat digunakan adalah:
+1. > menyimpan output ke file, contoh ls > myoutput.txt, akan menyimpan hasil ls ke file myoutput.txt
+2. >> menambah output ke file, ls >> myoutput.txt, akan menambah hasil ls ke file myoutput.txt
+3. < membaca file sebagai input, wc -l < myinput.txt, akan membaca file myinput sebagai input ke perintah wc -l
+4. 2> redirect pesan error, misalkan tidak ada file myinput.txt, dan perintah ls myinput.txt 2>error.txt akan menyimpan 'no such file or directory' ke file error.txt
+5. | mengirim output suatu command sebagai input bagi command lain, ls | grep '^......rw', akan menampilkan baris file hasil ls yang memiliki hak rw pada user others.
+# Process Management
+Process management digunakan untuk menampilkan process yang aktif pada Linux.
+1. top, menampilkan ringkasa kejadian pada system seperti task aktif, yang running dan sleeping, pemakaian memory dan swap serta daftar process yang berjalan
+2. ps [aux], adalah singkatan dari process, misalkan perintah ps aux | grep 'firefox' akan menampilkan baris process terkait dengan aplikasi 'firefox'
+3. kill <psid>, menghentikan process id tertentu
+  
