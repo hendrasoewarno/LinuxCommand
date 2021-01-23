@@ -35,7 +35,7 @@ Selain tombol panah, anda dapat menekan ESC disertai dengan kombinasi key beriku
 # wildcard ?, *, []
 Karakter wildcard adalah sering digunakan untuk operasi terkait dengan file, seperti ls, cp, mv, rm, adapun aturan terkait dengan wildcard adalah:
 1. ? mewakili 0 atau 1 karakter
-2. * mewakili 0 atau beberapa karakter
+2. \* mewakili 0 atau beberapa karakter
 3. [] mewakili range karakter, misalkan [ab] menyatakan karakter a atau b, [^ab] menyatakan bukan karakter a atau b, [0-9] menyatakan karakter 0 sampai 9, [^a-d] menyatakan bukan karakter a-d.
 # Permission rwx
 Pada setiap file atau directory di Linux memiliki permisi yang terdiri dari tiga segment rwx, yang merupakan segment untuk owner, group, dan others, dimana:
