@@ -74,8 +74,13 @@ Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2
 5. \| mengirim output suatu command sebagai input bagi command lain, ls | grep '^......rw', akan menampilkan baris file hasil ls yang memiliki hak rw pada user others.
 ## Process Management
 Process management digunakan untuk menampilkan process yang aktif pada Linux.
-1. top, menampilkan ringkasa kejadian pada system seperti task aktif, yang running dan sleeping, pemakaian memory dan swap serta daftar process yang berjalan
+1. top, menampilkan ringkasan kejadian pada system seperti task aktif, yang running dan sleeping, pemakaian memory dan swap serta daftar process yang berjalan
 2. ps [aux], adalah singkatan dari process, misalkan perintah ps aux | grep 'firefox' akan menampilkan baris process terkait dengan aplikasi 'firefox'
 3. kill <psid>, menghentikan process id tertentu
 ## Script
-Pembuatan script akan sangat membantu dalam banyak hal, yaitu mengotomatisasi rangkaian perintah yang perlu dilakukan secara berurutan.
+Pembuatan script akan sangat membantu dalam banyak hal, yaitu mengotomatisasi rangkaian perintah yang perlu dilakukan secara berurutan. Adapun beberapa variable yang secara otomatis yang disediakan pada script:
+1. $0 nama dari script
+2. $1-$9 parameter pertama, kedua dan seterusnya
+3. $# jumlah parameter yang dilewatkan ke script
+4. $* semua parameter yang dilewatkan ke script
+
