@@ -59,20 +59,20 @@ Karakter wildcard adalah sering digunakan untuk operasi terkait dengan file, sep
 1. ? mewakili 0 atau 1 karakter
 2. \* mewakili 0 atau beberapa karakter
 3. [] mewakili range karakter, misalkan [ab] menyatakan karakter a atau b, [^ab] menyatakan bukan karakter a atau b, [0-9] menyatakan karakter 0 sampai 9, [^a-d] menyatakan bukan karakter a-d.
-# Permission rwx
+## Permission rwx
 Pada setiap file atau directory di Linux memiliki permisi yang terdiri dari tiga segment rwx, yang merupakan segment untuk owner, group, dan others, dimana:
 1. r adalah kemampuan membaca (angka 1 pada bit ketiga)
 2. w adalah kemampuan menulis (angka 1 pada bit kedua)
 3. x adalah kemampuan eksekusi untuk file, atau kemampuan masuk ke direktori (angka 1 pada bit pertama)
 Permision rwx adalah direpresentasikan dalam bilangan numerik, misalkan untuk kemampuan baca dan tulis tetapi tidak bisa eksekusi adalah 6 (atau 110 secara biner)
-# Pipeline dan Redirection
+## Pipeline dan Redirection
 Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2) yang memungkinkan redirection output suatu command menjadi input ke command lain. Beberapa simbol yang dapat digunakan adalah:
 1. \> menyimpan output ke file, contoh ls > myoutput.txt, akan menyimpan hasil ls ke file myoutput.txt
 2. \>\> menambah output ke file, ls >> myoutput.txt, akan menambah hasil ls ke file myoutput.txt
 3. < membaca file sebagai input, wc -l < myinput.txt, akan membaca file myinput sebagai input ke perintah wc -l
 4. 2\> redirect pesan error, misalkan tidak ada file myinput.txt, dan perintah ls myinput.txt 2>error.txt akan menyimpan 'no such file or directory' ke file error.txt
 5. \| mengirim output suatu command sebagai input bagi command lain, ls | grep '^......rw', akan menampilkan baris file hasil ls yang memiliki hak rw pada user others.
-# Process Management
+## Process Management
 Process management digunakan untuk menampilkan process yang aktif pada Linux.
 1. top, menampilkan ringkasa kejadian pada system seperti task aktif, yang running dan sleeping, pemakaian memory dan swap serta daftar process yang berjalan
 2. ps [aux], adalah singkatan dari process, misalkan perintah ps aux | grep 'firefox' akan menampilkan baris process terkait dengan aplikasi 'firefox'
