@@ -93,6 +93,16 @@ then
     exit
 fi  
 date=`date +%F`
+# Do we already have a backup folder for todays date?
+if [ -d ~/backups/$date.tar.gz ]
+then
+    echo 'Database already been backed up today, overwrite?'
+    read answer
+    if [ $answer != 'y' ]
+    then
+        exit
+    fi
+fi   
 mkdir ~/backups/$date
 mysqldump --databases $* > ~/backups/$date/my_databases.sql
 tar -czvf ~/backups/$date/my_databases.sql ~/backups/$date
