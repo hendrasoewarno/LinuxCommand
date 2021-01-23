@@ -86,8 +86,12 @@ Pembuatan script akan sangat membantu dalam banyak hal, yaitu mengotomatisasi ra
 Contoh:
 ```
 #!/bin/bash
-# Backs up a single project directory
-# Ryan 23/1/2021 
+# Backs up a list of database
+if [ $# != 1 ]
+then
+    echo Usage: Minimal a single argument which is the database to backup
+    exit
+fi  
 date=`date +%F`
 mkdir ~/backups/$date
 mysqldump --databases $* > ~/backups/$date/my_databases.sql
