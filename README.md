@@ -1,5 +1,5 @@
 # LinuxCommand
-Berikut ini adalah beberapa perintah Linux yang perlu dikuasai oleh Network Administrator untuk memudahkan tugas sehari-hari
+Pemahaman dan penguasaan perintah dasar Linux akan sangat membantu tugas seorang network administrator.
 1. pwd singkatan dari print working directory, yaitu untuk menampilkan directory aktif saat ini.
 2. ls [-options] [location], singkatan dari list, yaitu untuk menampilkan seluruh file pada directory aktif atau sesuai dengan location yang dinyatakan. Pemakaian perintah ls dapat juga diikuti dengan options seperti -l untuk menampikan regular file dalam bentuk daftar. (directory+permission blocks owner group filesize moditime name). Untuk menampilkan hidden file dapat menambah opsi -a
 3. cd [location], singkatan dari change directory, yaitu digunakan untuk berpindah working directory.
