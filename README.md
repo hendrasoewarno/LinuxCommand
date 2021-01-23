@@ -13,7 +13,23 @@ Berikut ini adalah beberapa perintah Linux yang perlu dikuasai oleh Network Admi
 11. head [-number of lines] <file>, menampilkan n jumlah baris pertama dari suatu file
 12. tail [-number of lines] <file>, menampilkan n jumlah baris terakhir dari suatu file
 13. sed <expression> <file>, melakukan operasi search and replace pada file. contoh sed 's/banana/orange/g' fruit adalah operasi menganti seluruh kata banana menjadi orange dalam file fruit.
-14. egrep [-options] <pattern> <file>, menampilkan baris yang memenuhi pola pencarian berdasarkan ekspresi regressi, contoh egrep 'mellon' fruit akan menampilkan baris yang memiliki kata mellon, seperti mellon, water mellon dan winter mellon. contoh egrep -n 'mellon' fruit akan menambilkan nomor baris dan baris yang memiliki kata mellon. contoh egrep -c 'mellon' fruit akan menampilkan jumlah baris yang mengandung kata mellon.
+14. egrep [-options] <pattern> <file>, menampilkan baris yang memenuhi pola pencarian berdasarkan ekspresi reqular, contoh egrep 'mellon' fruit akan menampilkan baris yang memiliki kata mellon, seperti mellon, water mellon dan winter mellon. contoh egrep -n 'mellon' fruit akan menambilkan nomor baris dan baris yang memiliki kata mellon. contoh egrep -c 'mellon' fruit akan menampilkan jumlah baris yang mengandung kata mellon.
+  
+## Regular Expression
+Pengetahuan terkait dengan ekspresi regular dapat membantu pada perintah yang mendukung pencocokan pattern seperti egrep. Adapun aturan pada suatu ekspresi regular adalah:
+1. . (titik) mewakili suatu karakter tunggal
+2. ? (tanda tanya) mewakili 0 atau 1 karakter didepannya
+3. * (asterik) mewakili 0 atau sejumlah karakter didepannya
+4. + (plus) mewakili minimal 1 atau sejumlah karakter didepannya
+5. {n} mewakili persis n jumlah karakter didepannya
+6. {n,m} mewakili n sampai m jumlah karakter didepannya
+9. [agd] mewakili salah satu karakter didalam kurung
+10. [^agd] mewakili satu karakter yang tidak ada dalam kurung
+11. [c-f] mewakili satu karakter c sampai f
+12. () mengelompokan sejumlah karakter dalam kurung sebagai satu kesatuan
+13. | mewakili pernyataan atau
+14. ^ pencocokan dari awal baris
+15. $ pencocokan dari akhir bari
 
 ## vi <file>
 Perintah vi adalah command line editor yang digunakan untuk menampilkan file yang disertai dengan kemampuan search, dan edit. Untuk mengaktifkan modus command pada vi adalah menggunakan tombol ESC dan disertai dengan perintah:
