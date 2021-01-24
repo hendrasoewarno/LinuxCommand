@@ -83,7 +83,7 @@ Pembuatan script akan sangat membantu dalam banyak hal, yaitu mengotomatisasi ra
 2. $1-$9 parameter pertama, kedua dan seterusnya
 3. $# jumlah parameter yang dilewatkan ke script
 4. $* semua parameter yang dilewatkan ke script
-Contoh:
+Contoh Bash Script:
 ```
 #!/bin/bash
 # Backs up a list of database
