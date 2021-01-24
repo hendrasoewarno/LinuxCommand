@@ -65,6 +65,25 @@ Pada setiap file atau directory di Linux memiliki permisi yang terdiri dari tiga
 2. w adalah kemampuan menulis (angka 1 pada bit kedua)
 3. x adalah kemampuan eksekusi untuk file, atau kemampuan masuk ke direktori (angka 1 pada bit pertama)
 Permision rwx adalah direpresentasikan dalam bilangan numerik, misalkan untuk kemampuan baca dan tulis tetapi tidak bisa eksekusi adalah 6 (atau 110 secara biner)
+## Special permission
+Selain regular permission x (eksekusi), linux juga mengenal spesial permission yang dikenal sebagai SUID dan GUID yang menungkinkan user atau group menjalankan executable tertentu pada Linux dengan menggunakan priviledges root. Berikut ini adalah beberapa perintah Linux yang memiliki SUID:
+```
+ls -l /bin/su
+ls -l /bin/ping
+ls -l /bin/mount
+ls -l /bin/umount
+ls -l /usr/bin/passwd
+```
+Pengaturan SUID dan GUID adalah menggunakan perintah:
+```
+sudo chmod u-s,g+s <file>
+```
+## Sticky Bit
+Selain SUID dan GUID, Linux juga memiliki suatu special permission untuk directory yang hanya memperbolehkan seorang user menghapus file yang dia miliki, mereka tidak dapat menghapus file orang lain tanpa perduli terhadap permission yang tertera pada file dalam directory tersebut. Sticky bit (t) ditempatkan pada bit executable kelompok others. Sticky bit biasanya terdapat pada directory /tmp dan /var/tmp
+```
+ls -lh -d /tmp
+ls -lh -d /var/tmp
+```
 ## Pipeline dan Redirection
 Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2) yang memungkinkan redirection output suatu command menjadi input ke command lain. Beberapa simbol yang dapat digunakan adalah:
 1. \> menyimpan output ke file, contoh ls > myoutput.txt, akan menyimpan hasil ls ke file myoutput.txt
