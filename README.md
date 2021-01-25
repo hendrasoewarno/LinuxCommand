@@ -85,7 +85,7 @@ ls -lh -d /tmp
 ls -lh -d /var/tmp
 ```
 ## Pipeline dan Redirection
-Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2) yang memungkinkan redirection output suatu command menjadi input ke command lain. Beberapa simbol yang dapat digunakan adalah:
+Pada sistem operasi Linux, segala hal dinyatakan sebagai hal, sisanya adalah process. Secara umum, suatu command pada Linux memiliki STDIN(0), STDOUT(1), dan STDERR(2) yang memungkinkan redirection output suatu command menjadi file input ke command lain. Beberapa simbol yang dapat digunakan adalah:
 1. \> menyimpan output ke file, contoh ls > myoutput.txt, akan menyimpan hasil ls ke file myoutput.txt
 2. \>\> menambah output ke file, ls >> myoutput.txt, akan menambah hasil ls ke file myoutput.txt
 3. < membaca file sebagai input, wc -l < myinput.txt, akan membaca file myinput sebagai input ke perintah wc -l
