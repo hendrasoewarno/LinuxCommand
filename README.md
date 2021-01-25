@@ -74,9 +74,15 @@ ls -l /bin/mount
 ls -l /bin/umount
 ls -l /usr/bin/passwd
 ```
-Pengaturan SUID dan GUID adalah menggunakan perintah:
+Pengaturan SUID adalah menggunakan perintah:
 ```
-sudo chmod u-s,g+s <file>
+sudo chmod u-s <file>
+sudo chmod u+s <file>
+```
+Sedangkan pengaturan GUID adalah menggunakan perintah:'
+```
+sudo chmod g-s <file>
+sudo chmod g+s <file>
 ```
 ## Sticky Bit
 Selain SUID dan GUID, Linux juga memiliki suatu special permission untuk directory yang hanya memperbolehkan seorang user menghapus file yang dia miliki, mereka tidak dapat menghapus file orang lain tanpa perduli terhadap permission yang tertera pada file dalam directory tersebut. Sticky bit (t) ditempatkan pada bit executable kelompok others. Sticky bit biasanya terdapat pada directory /tmp dan /var/tmp
