@@ -27,10 +27,12 @@ Pengetahuan terkait dengan ekspresi regular dapat membantu pada perintah yang me
 9. [agd] mewakili salah satu karakter didalam kurung
 10. [^agd] mewakili satu karakter yang tidak ada dalam kurung
 11. [c-f] mewakili satu karakter c sampai f
-12. () mengelompokan sejumlah karakter dalam kurung sebagai satu kesatuan
+12. () mengelompokan sejumlah karakter dalam kurung sebagai satu kesatuan, contoh (abc|abd) match abc atau abd
 13. | mewakili pernyataan atau
 14. ^ pencocokan dari awal baris
 15. $ pencocokan dari akhir baris
+16. ?! negative outlook, contoh (?!abc|abd) match kalau bukan abc atau abd
+
 ### Contoh
 1. egrep '[aeiou]{2,}' fruit, akan menampilkan baris memiliki nama buah yang memiliki 2 atau lebih huruf hidup
 2. egrep '^a' fruit, menampilkan baris yang diawali dengan huruf a
